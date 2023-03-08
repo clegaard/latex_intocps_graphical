@@ -1,0 +1,94 @@
+%\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{mathtools}
+%\usepackage{amssymb}
+\usepackage{amsmath}
+%\usepackage{stmaryrd}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{varioref}
+\usepackage{xspace}
+\usepackage{paralist}
+\usepackage{fancybox}
+\usepackage{calc}
+\usepackage{verbatim}
+%\usepackage{rt-semantics-defs}
+%\usepackage{mdframed}
+\def\H#1{\hspace*{#1em}}
+\usepackage{relsize}
+%\usepackage{skak} % for Chess
+%\usepackage{latexsym}
+%\usepackage{bsymb}
+\usepackage{booktabs}
+\usepackage[scaled]{helvet}
+\usepackage{mwe}
+\usepackage{float}
+\usepackage{array}
+%\usepackage{hyphenat}
+\usepackage{fancyvrb}
+
+%\pagestyle{plain}
+
+% commnent related stuff
+\usepackage{xargs} % Use more than one optional parameter in a new commands
+\usepackage[pdftex,dvipsnames]{xcolor} 
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+%
+
+
+\setlength\textfloatsep{8.0pt plus 2.0pt minus 2.0pt}
+\setlength\intextsep{4.0pt plus 2.0pt minus 2.0pt}
+\setlength\floatsep{4.0pt plus 2.0pt minus 2.0pt}
+\setlength\abovecaptionskip{4.0pt plus 2.0pt minus 2.0pt}
+\setlength\belowcaptionskip{0pt}
+
+%\renewcommand{\paragraph}[1]{\noindent\textbf{\itshape{#1}}\ \ }
+
+%\pagestyle{plain}
+\usepackage{times}
+
+\usepackage{listingsVDM}
+% *************** Overture list ***************
+% use package for VDM language definition
+%\usepackage{overturelanguagedef}
+%% Define Overture listing for The VDM language
+%\lstdefinestyle{overtureLanguageStyle}{basicstyle=\ttfamily,
+%			frame=trBL,
+%%			numbers=left,
+%%			gobble=0,
+%			showstringspaces=false,
+%%			linewidth=\textwidth,
+%			frameround=fttt,
+%			captionpos=b,
+%			aboveskip=5mm,
+%			belowskip=5mm,
+%			framexleftmargin=0mm,
+%			framexrightmargin=0mm}
+%
+%%\lstdefinestyle{Clang}{
+%%			 basicstyle=\ttfamily,
+%%			 frame=TRbl,
+%%			 numbers=left,
+%%			 numberstyle=\tiny,
+%%			 gobble=0,
+%%			 showstringspaces=false,
+%%			 linewidth=\textwidth,
+%%			 frameround=ffff,
+%%			 captionpos=b,
+%%			 aboveskip=5mm,
+%%			 belowskip=5mm,
+%%			 framexleftmargin=0mm,
+%%			 framexrightmargin=0mm
+%%}
+%%
+%%
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+\include{customlangdef}
+\lstset{basicstyle=\scriptsize,tabsize=2,frame=trBL,frameround=fttt}

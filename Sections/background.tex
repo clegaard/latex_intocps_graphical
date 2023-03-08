@@ -1,0 +1,28 @@
+\section{Background}\label{sec:background}
+%For CPSs different models can be coupled together into multi-models using co-simulation \cite{Gomes&18,Thule&19}. In the INTO-CPS context this have been established using the Functional Mockup Interface (FMI) standard~\cite{FMIStandard2.0}\footnote{\url{http://fmi-standard.org/}}, supports co-simulation of models packaged as Functional Mock-up Units (FMUs), each of which is treated as a `black box', supporting the separation of Intellectual Property (IP).
+
+It is important to make a distinction between what the FMI standard defines and the information required to form a valid co-simulation scenario as illustrated on Figure~\ref{fig:connection}. 
+The standard is solely concerned with specifying the interface of an individual FMU.
+A co-simulation scenario describes what instances of FMUs exist, how they are connected, their parameters and their experimental frame~\cite{Gomes&18}. In order to provide the reader with sufficient background about the existing technologies Section~\ref{sec:sysml} briefly introduces the existing SysML diagrams to describe the composition of FMUs, Section~\ref{sec:adaptation} provides a brief introduction to separate existing work on semantic adaptation including hierarchical compositions and Section~\ref{sec:SSP} provides a brief introduction to the new SSP standard. 
+
+\input{SubSections/existing_sysml_connection_diagram.tex}
+
+\input{SubSections/SemanticAdaptations.tex}
+
+\input{SubSections/system_structure_and_parameterization.tex}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

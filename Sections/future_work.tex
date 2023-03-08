@@ -1,0 +1,55 @@
+\section{Future Work}\label{sec:future}
+
+The work presented in this paper is at an early stage and as a consequence there are many extension possibilities that we envisage in the future. Below the most obvious directions are listed.
+
+\subsection{Generating template of a component}
+
+In the existing SysML CPS profile there is a concept of Architecture Structure Diagrams. Inside these it is possible to include all the FMUs included in a particular project. The interface for each of these can be described here and as a consequence it is possible to export model descriptions for each FMU. Such model descriptions can then subsequently be imported by individual modelling and simulation tools such as Overture \cite{Larsen&10a}. We envisage that it also will be easy to include this capability inside the graphical editor. Such model descriptions can also be included as new libraries that others will be able to make use of in their co-simulation composition.
+
+\subsection{Implement SSP support in Maestro}
+The added value of the editor relies on the co-simulation Maestro supporting the SSP standard.
+A central question is how to support the simulation of hierarchical systems.
+One potential approach is turning each subsystem into a FMUs. This approach is described in Hierarchical FMU~\cite{Thule&19} and the DSL for hierarchical co-simulation~\cite{Gomes&18a}.
+
+\subsection{Runtime validation}
+One of the uses of co-simulation is to validate a system's behaviour during runtime to detect and correct any potential design flaws, as early in the development cycle as possible.
+Currently there is no mechanism built in to INTO-CPS to support this task.
+It is useful to investigate whether a suitable method exists for providing runtime validation during simulation.
+Potential inspiration may be drawn from \cite{Havelund&04}.
+
+
+\subsection{Simplify design space exploration and adapt to SSP} \label{ssec:dse_simplification}
+In the context of INTO-CPS design space exploration is a mechanism that allows a scenario to be run multiple times with different combinations of parameters.
+The performance of each run is evaluated by means one or more cost function, each defined in its own Python script. 
+The scripts takes as input the traces resulting from the INTO-CPS co-simulation, its parameters and global information such as the step size.
+
+Currently this information is passed to the scripts by the means of positional arguments and therefore requires the user to manually define the ordering of the individual arguments. This obviously does not scale well with the number of parameters to the scripts.
+
+To eliminate the need for manually ordering a reference to an object containing the relevant information may be passed instead.
+This would allow a script to access variables using semantically meaningful names such as \emph{data.traces.wt.level} instead of \emph{sys.args[3]}.
+
+
+\subsection{Package manager for components}
+The tools 20-sim, OMEdit and Simulink all come with an extensive library of components which provide much of the functionality a user would otherwise have to implement themselves.
+The same benefits are also realised in INTO-CPS application where open-source libraries and framework are used extensively.
+
+While the SSP standard provides the format for exchange it does not describe the infrastructure to share these.
+It would be interesting to investigate effective mechanisms for publishing and managing components.
+Potentially inspiration can be drawn from a package manager such as the one used in the application, npm\footnote{\url{https://www.npmjs.com/}}.
+
+
+%\subsection{Auto-routing in editor}
+% How about auto connection like in Xilinx Vivado, they do it well but, how do they do it?
+
+%This section covers future work:
+%\begin{enumerate}
+%\item Online sharing service for exchange of FMUs and SSP packages.
+%\item User experience improvements such as Auto Connection, Routing, Layout.
+%\item Implementing validation mechanism for parameters.
+%\item Selecting signals to trace graphically. 
+%\end{enumerate}
+
+
+
+
+%support for hierarchical co-simulation which is not present in the current SysML connections diagram.
